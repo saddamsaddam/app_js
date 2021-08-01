@@ -1,0 +1,61 @@
+step 1:
+npm install @react-navigation/native
+step 2:
+npm install react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+step 3:
+npm install @react-navigation/stack
+step 4:
+// In App.js in a new project
+
+import * as React from 'react';
+import { View, Text } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from "./src/screens/HomeScreen";
+
+function HomeScreen1() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+    </View>
+  );
+}
+
+const Stack = createStackNavigator();
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="homeScreen">
+        <Stack.Screen name="homeScreen" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+export default App;
+
+step 5:
+import React from 'react';
+import {Button, StyleSheet, Text,Alert, View} from 'react-native';
+export default function HomeScreen() {
+
+
+  return (
+    <View style={styles.container}>
+
+<Text>
+  okk
+</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+ 
